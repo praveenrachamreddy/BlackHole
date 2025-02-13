@@ -38,7 +38,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace "com.shadow.blackhole"
-    compileSdkVersion 33
+    compileSdkVersion 34
     ndkVersion "21.4.7075529"
 
     compileOptions {
