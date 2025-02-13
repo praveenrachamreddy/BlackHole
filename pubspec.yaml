@@ -46,18 +46,18 @@ dependencies:
   # just_audio_libwinmedia: ^0.0.4 # For windows and linux.
   logging: ^1.2.0
   marquee: ^2.2.3
-  material_design_icons_flutter: 5.0.5955-rc.1
+  material_design_icons_flutter: ^7.0.7296
   metadata_god: ^0.5.2+1
   on_audio_query: ^2.9.0
   package_info_plus: ^5.0.1
   palette_generator: ^0.3.3+3
   path_provider: ^2.1.1
   permission_handler: ^11.1.0
-  persistent_bottom_nav_bar: ^6.2.1
+  persistent_bottom_nav_bar: ^5.0.2
     #git:
       #url: https://github.com/Sangwan5688/PersistentBottomNavBar
       #ref: ecdadb0
-  receive_sharing_intent: ^latest
+  receive_sharing_intent: ^1.6.7
   share_plus: ^7.2.1
   sizer: ^2.0.15
   sliding_up_panel: ^2.0.0+1
