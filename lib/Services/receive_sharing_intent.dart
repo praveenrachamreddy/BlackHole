@@ -1,7 +1,6 @@
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 
 class ReceiveSharingIntentService {
-  // Method to initialize sharing intent listeners
   void initReceiveSharingIntent({
     required Function(String) handleSharedText,
     required Function(List<SharedMediaFile>) handleSharedFiles,
