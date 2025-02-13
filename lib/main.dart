@@ -67,7 +67,13 @@ Future<void> main() async {
     setOptimalDisplayMode();
   }
   await startService();
-  runApp(MyApp());
+  runApp(
+    Sizer(
+      builder: (context, orientation, deviceType) {
+        return MyApp(); // Wrap your app with Sizer
+      },
+    ),
+  );
 }
 
 Future<void> setOptimalDisplayMode() async {
@@ -218,14 +224,27 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
-
+    return MaterialApp(
+      title: 'BlackHole',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      locale: _locale,
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            width: 50.w, // Responsive width
+            height: 20.h, // Responsive height
+            color: Colors.blue,
+            child: Text(
+              'Responsive App',
+              style: TextStyle(fontSize: 16.sp), // Responsive font size
+            ),
+          ),
+        ),
+      ),
+    );
+  }
     return AnnotatedRegion(
       value: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
